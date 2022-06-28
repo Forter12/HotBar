@@ -19,7 +19,7 @@ class ProviderMain{
 	}
 	
 	public function getFaction(Player $player) : string {
-    $name = strtolower($player->getName());
+                $name = strtolower($player->getName());
 		if($this->getFractionsPro() !== null){
 		 	 $clan = $this->getFractionsPro()->getPlayerFaction($name);
 			return $clan !== null ? $clan : $this->config->get('Default-faction');
